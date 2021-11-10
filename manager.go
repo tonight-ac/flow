@@ -133,7 +133,7 @@ func (m *Manager) resize() {
 	// 扩容board
 	newBoard := make([][]*WorkUnit, size<<1)
 	for i, row := range newBoard {
-		row = make([]*WorkUnit, size)
+		row = make([]*WorkUnit, size<<1)
 		if i < len(m.board) {
 			for j, o := range m.board[i] {
 				row[j] = o
